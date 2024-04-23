@@ -33,7 +33,7 @@ namespace Lecture4
         }
         public override string ToString()
         {
-            return $"Title: {title} Director: {director} Rating: {rating} Price: {price}";
+            return $"Title: {title} Director: {director} Rating: {rating} Price: {price} \n";
         }
     }
 }

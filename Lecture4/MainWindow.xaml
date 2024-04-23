@@ -7,19 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Canvas>
-        <RichTextBox
-            Height="286"
-            Width="400"
-            Canvas.Left="200"
-            Canvas.Top="49" TextChanged="RichTextBox_TextChanged_1">
+        <RichTextBox x:Name="richTxtBoxInfo"
+            Height="163"
+            Width="600"
+            Canvas.Left="100"
+            Canvas.Top="54" TextChanged="richTxtBoxInfo_Changed" HorizontalAlignment="Center" VerticalAlignment="Top">
             <FlowDocument>
                 <Paragraph>
-                    <Run
-                        x:Name="runDisplay" Text="Hello"
-                         />
+                    <Run x:Name="runDisplay" Text="Click a button to show extra details"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
+        <Button x:Name="btnShawShank" Content="The Shawshank Redemption" Canvas.Left="100" Canvas.Top="255" Click="btnShawShank_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Width="160px"/>
+        <Button x:Name="btnGodFather" Content="The God Father" Canvas.Left="100" Canvas.Top="307" Click="btnGodFather_Click" Width="160px"/>
+        <Button x:Name="btnDarkKnight" Content="The Dark Knight" Canvas.Left="100" Canvas.Top="357" Width="160" Click="btnDarkKnight_Click"/>
+        <Button x:Name="btnInception" Content="Inception" Canvas.Left="380" Canvas.Top="255" Width="160px" Click="btnInception_Click"/>
+        <Button x:Name="btnForrest" Content="Forrest Gump" Canvas.Left="380" Canvas.Top="307" Width="160px" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnForrest_Click"/>
+        <Button x:Name="btnMatrix" Content="The Matrix" Canvas.Left="380" Canvas.Top="357" Width="160px" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnMatrix_Click"/>
 
     </Canvas>
 </Window>

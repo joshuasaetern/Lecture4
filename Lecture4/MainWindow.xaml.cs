@@ -20,9 +20,7 @@ namespace Lecture4
     /// Lecture 4 
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            Product[] movies =
+        Product[] movies =
             {
                 new Product {title = "The Shawshank Redemption", director = "Frank Darabont", rating = 9.3, price = 9.99m },
                 new Product {title = "The Godfather", director = "Francis Ford Coppola", rating = 9.2, price = 12.99m },
@@ -31,20 +29,52 @@ namespace Lecture4
                 new Product {title = "Forrest Gump", director = "Robert Zemeckis", rating = 8.8, price = 7.99m },
                 new Product {title = "The Matrix", director = "Lana and Lilly Wachowski", rating = 8.7, price = 8.99m },
             };
+        public MainWindow()
+        {
+            InitializeComponent();
+            
+
+            /*
             for (int i = 0; i < movies.Length; i++)
             {
                 runDisplay.Text += movies[i].ToString();
             }
+            */
+        }
+
+        private void richTxtBoxInfo_Changed(object sender, TextChangedEventArgs e)
+        {
             
         }
-        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
+        private void btnShawShank_Click(object sender, RoutedEventArgs e)
+        {
+            runDisplay.Text = movies[0].ToString();
         }
 
-        private void RichTextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        private void btnGodFather_Click(object sender, RoutedEventArgs e)
         {
+            runDisplay.Text = movies[1].ToString();
+        }
 
+        private void btnDarkKnight_Click(object sender, RoutedEventArgs e)
+        {
+            runDisplay.Text = movies[2].ToString();
+        }
+
+        private void btnInception_Click(object sender, RoutedEventArgs e)
+        {
+            runDisplay.Text = movies[3].ToString();
+        }
+
+        private void btnForrest_Click(object sender, RoutedEventArgs e)
+        {
+            runDisplay.Text = movies[4].ToString();
+        }
+
+        private void btnMatrix_Click(object sender, RoutedEventArgs e)
+        {
+            runDisplay.Text = movies[5].ToString();
         }
     }
 }
